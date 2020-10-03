@@ -1,10 +1,17 @@
 {
-    "name": "azure-app-insights-copy-button",
-    "version": "0.0.1",
+    "name": "Azure App Insights Copy Button",
+    "author": "Sergey Zwezdin (sergey@zwezdin.com)",
+    "version": "1.0.0",
     "manifest_version": 2,
-    "description": "",
-    "homepage_url": "https://github.com/sergeyzwezdin",
-    "icons": {},
+    "description": "Chrome extension that adds Copy button for every App Insights record",
+    "homepage_url": "https://github.com/sergeyzwezdin/azure-app-insights-copy-button",
+    "icons": {
+        "16": "assets/azure-app-insights-copy-button-16.png",
+        "32": "assets/azure-app-insights-copy-button-32.png",
+        "48": "assets/azure-app-insights-copy-button-48.png",
+        "64": "assets/azure-app-insights-copy-button-64.png",
+        "128": "assets/azure-app-insights-copy-button-128.png"
+    },
     "default_locale": "en",
     "permissions": ["contentSettings", "clipboardWrite", "https://portal.azure.com/", "https://logsextension.hosting.portal.azure.net/"],
     "content_scripts": [

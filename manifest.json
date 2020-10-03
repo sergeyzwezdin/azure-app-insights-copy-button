@@ -1,0 +1,26 @@
+{
+    "name": "azure-app-insights-copy-button",
+    "version": "0.0.1",
+    "manifest_version": 2,
+    "description": "",
+    "homepage_url": "https://github.com/sergeyzwezdin",
+    "icons": {},
+    "default_locale": "en",
+    "permissions": ["contentSettings", "clipboardWrite", "https://portal.azure.com/", "https://logsextension.hosting.portal.azure.net/"],
+    "content_scripts": [
+        {
+            "matches": ["https://logsextension.hosting.portal.azure.net/*"],
+            "all_frames": true,
+            "css": ["src/inject/inject.css"]
+        },
+        {
+            "matches": ["https://portal.azure.com/*"],
+            "js": ["src/inject/main.js"]
+        },
+        {
+            "matches": ["https://logsextension.hosting.portal.azure.net/*"],
+            "all_frames": true,
+            "js": ["src/inject/inject.js"]
+        }
+    ]
+}

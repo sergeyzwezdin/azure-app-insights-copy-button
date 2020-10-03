@@ -1,0 +1,13 @@
+.copy-button {
+    margin: 0 0 0 10px;
+    padding: 1px 3px;
+    border: 1px solid #fff;
+    opacity: 0.7;
+}
+
+.copy-button:hover {
+    background-color: #555;
+}
+.copy-button:active {
+    background-color: #aaa;
+}

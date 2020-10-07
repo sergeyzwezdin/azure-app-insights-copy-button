@@ -1,3 +1,10 @@
+function initializeUnderlyingPanel(button) {
+    if (button) {
+        button.click();
+        button.click();
+    }
+}
+
 function getExpandButtons(container, processed) {
     return Array.from(container?.querySelectorAll(".k-hierarchy-cell > a") ?? [])
         .filter(({ style }) => style.display !== "none")
@@ -10,8 +17,7 @@ function expandAllInnerSections(container) {
     let buttons = getExpandButtons(container, processed);
     while (buttons.length > 0) {
         for (const button of buttons) {
-            button.click();
-            button.click();
+            initializeUnderlyingPanel(button);
         }
 
         processed = [...processed, ...buttons];
@@ -49,8 +55,7 @@ function copyClick(target) {
         const row = target.closest(".k-master-row");
 
         const expandButton = row?.querySelector(".k-hierarchy-cell > a");
-        expandButton?.click();
-        expandButton?.click();
+        initializeUnderlyingPanel(expandButton);
 
         const detailsContainer = row?.nextElementSibling;
 
